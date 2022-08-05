@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from egotype.design/work/web/html/kounter/index-particle.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Aug 2022 02:40:08 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <!-- Title of Website -->
+  <title>Docify App - Upload verify document</title>
+
+  <meta name="description" content="Docify App - Upload verify document" />
+  <meta name="keywords" content="Docify App - Upload verify document" />
+  <meta name="author" content="Egotype">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Font Icons -->
+  <link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700">
+
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="css/responsive.css" rel="stylesheet">
+  <style>
+    .form-input {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 584px;
+      margin: 0 auto 3rem;
+      background: rgb(14 53 74 / 50%);
+      border-radius: 50px;
+      backdrop-filter: blur(10px);
+    }
+
+    .dc-input {
+      background: transparent;
+      border-radius: 50px;
+      border: 0;
+      height: 50px;
+      width: 100%;
+      padding: 0 15px;
+      outline: none;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .btn-upload-file {
+      background: #0e4360;
+      color: #fff !important;
+      margin: 0;
+      border-radius: 0 50px 50px 0;
+      padding-right: 30px;
+      text-transform: capitalize;
+      font-size: 15px;
+    }
+
+    .mb-0 {
+      margin-bottom: 0;
+    }
+
+    .form-input input[type="file"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background-color: rgb(255 255 255 / 20%) !important;
+      border-color: #062232 !important;
+      padding: 1.25rem 3rem;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 50px;
+      padding: 0 4rem;
+      backdrop-filter: blur(10px);
+    }
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".scrollspy" class="bg-dark">
+  <div id="page">
+    <div id="page-particle" class="section-overlay" data-line-color="#999" data-dot-color="#999">
+    </div>
+    <div class="section-overlay overlay-opacity"></div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="info" class="col-md-12 text-white text-center page-info col-transform">
+          <div class="vert-middle">
+            <div class="">
+
+              <!-- Logo -->
+              <div class="">
+                <img src="images/logo-lg.png" height="65" alt="">
+              </div>
+              <!-- /End Logo -->
+
+              <div class="">
+                <!-- Headline & Description -->
+                <h2 class="mb-0"><span class="font-weight-200"
+                    style="font-size:16px;letter-spacing: 2px;margin-bottom:10px;display: block;margin-top: 2rem;">Upload your document want to verify
+                </h2>
+
+                <div class="form-group">
+                  <div class="form-input">
+                    <input type="file" class="input-file" />
+                    <input type="text" class="dc-input upload-file" id="file-name">
+                    <button class="btn btn-upload-file"> <i class="fal fa-upload"></i> <span>Upload</span></button>
+                  </div>
+                  <div class="align-center mt-5">
+                    <button class="btn btn-primary">Verify Now</button>
+                  </div>
+                </div>
+                </p>
+                <!-- /End Headline & Description -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/plugins/jquery1.11.2.min.js"></script>
+  <script src="js/plugins/bootstrap.min.js"></script>
+  <script src="js/plugins/scrollreveal.min.js"></script>
+  <script src="js/plugins/jquery.particleground.min.js"></script>
+
+  <!-- Custom Script -->
+  <script src="js/custom.js"></script>
+  <script>
+    $('.input-file').on('change', function () {
+      var fileName = $(this)[0].files[0].name;
+      $('#file-name').val(fileName);
+    });
+  </script>
+</body>
+
+</html>
