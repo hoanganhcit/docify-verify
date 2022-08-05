@@ -29,7 +29,9 @@
 
   <!-- Google Fonts -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
   <!-- Plugins CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link href="css/responsive.css" rel="stylesheet">
@@ -95,6 +97,17 @@
       padding: 0 4rem;
       backdrop-filter: blur(10px);
     }
+    .title-logo {
+      font-family: 'Tenor Sans', sans-serif;
+      font-size: 45px;
+      font-weight: 700;
+      text-transform: capitalize;
+      letter-spacing: 2px;
+      margin-bottom: 0;
+    }
+    .title-logo span {
+      color: #fca905;
+    }
   </style>
 
 </head>
@@ -104,7 +117,9 @@
     <div id="page-particle" class="section-overlay" data-line-color="#999" data-dot-color="#999">
     </div>
     <div class="section-overlay overlay-opacity"></div>
-
+    <div style="position: fixed;bottom: 2rem;right:2rem;">
+      <span style="color: #fff">Powered by Docify</span>
+    </div>
     <div class="container-fluid">
       <div class="row">
         <div id="info" class="col-md-12 text-white text-center page-info col-transform">
@@ -112,15 +127,15 @@
             <div class="">
 
               <!-- Logo -->
-              <div class="">
-                <img src="images/logo-lg.png" height="65" alt="">
+              <div class="center">
+                <h2 class="title-logo"><span>D</span>erby College</h2>
               </div>
               <!-- /End Logo -->
 
               <div class="">
                 <!-- Headline & Description -->
                 <h2 class="mb-0"><span class="font-weight-200"
-                    style="font-size:16px;letter-spacing: 2px;margin-bottom:10px;display: block;margin-top: 2rem;">Upload your document want to verify
+                    style="font-size:16px;letter-spacing: 2px;margin-bottom:10px;display: block;margin-top: 2rem;">Upload document you want to verify
                 </h2>
 
                 <div class="form-group">
