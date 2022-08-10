@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from egotype.design/work/web/html/kounter/index-particle.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Aug 2022 02:40:08 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
   <meta charset="utf-8">
@@ -33,6 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
   <!-- Plugins CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="css/responsive.css" rel="stylesheet">
   <style>
@@ -108,6 +107,26 @@
     .title-logo span {
       color: #fca905;
     }
+    .swal2-popup .swal2-title {
+      letter-spacing: 0;
+      font-weight: 500;
+    }
+    .mx-2 {
+      margin: 0 1rem !important;
+    }
+    .loading {
+      transition: .3s;
+      animation: spiner 1.2s linear infinite;
+    }
+    @keyframes spiner {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
   </style>
 
 </head>
@@ -145,7 +164,10 @@
                     <button class="btn btn-upload-file"> <i class="fal fa-upload"></i> <span>Upload</span></button>
                   </div>
                   <div class="align-center mt-5">
-                    <button class="btn btn-primary">Verify Now</button>
+                    <button class="btn btn-primary verify-click">
+                      <span>Verify Now</span>
+                      <i class="mx-2 fal fa-spinner loading"></i>
+                    </button>
                   </div>
                 </div>
                 </p>
@@ -165,6 +187,7 @@
   <script src="js/plugins/bootstrap.min.js"></script>
   <script src="js/plugins/scrollreveal.min.js"></script>
   <script src="js/plugins/jquery.particleground.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
 
   <!-- Custom Script -->
   <script src="js/custom.js"></script>
@@ -173,6 +196,14 @@
       var fileName = $(this)[0].files[0].name;
       $('#file-name').val(fileName);
     });
+    $(document).on('click', '.verify-click', function(e) {
+			swal(
+				'Successful Verification ',
+				'Bạn đã xác minh thành công',
+				'success'
+			)
+		});
+    
   </script>
 </body>
 
